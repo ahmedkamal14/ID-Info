@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+
+body {
+  @apply font-sans;
+  background-color: #dce9f4;
+  padding: 40px;
+}
+
+@media (max-width: 1199.98px) {
+  body {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  body {
+    padding: 15px;
+  }
+}
