@@ -21,6 +21,7 @@ const Home = () => {
 
     setValid(true);
     setWrong(false);
+    setId("");
   }
 
   const handleClick = () => {
