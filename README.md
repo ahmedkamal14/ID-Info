@@ -2,6 +2,8 @@
 
 This website extracts and displays information from Egyptian National ID numbers. It provides users with insights based on the ID, including gender, date of birth, and place of birth.
 
+![ID-Info Preview](snip.png)
+
 ## Features
 
 - **ID Extraction:** Validates and extracts data from the 14-digit Egyptian National ID number.
