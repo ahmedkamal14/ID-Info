@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
 
 body {
-  @apply font-sans;
+  font-family: "Baloo Bhaijaan 2", cursive;
   background-color: #dce9f4;
   padding: 40px;
 }
