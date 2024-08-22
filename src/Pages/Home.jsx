@@ -6,6 +6,7 @@ import TempText from "../Components/TempText";
 
 const Home = () => {
   function validateEgyptianID(id) {
+    const input = document.querySelector(".id-in");
     // Check if the ID is 14 characters long
     if (id.length !== 14) {
       setValid(false);
@@ -21,7 +22,7 @@ const Home = () => {
 
     setValid(true);
     setWrong(false);
-    setId("");
+    input.value = "";
   }
 
   const handleClick = () => {
@@ -64,7 +65,6 @@ const Home = () => {
               type="text"
               placeholder="رقم اليطاقة ..."
               className="bg-[#F3F3F3] w-[75%] md:w-[80%] px-2 md:px-4 py-2 md:py-5 focus:outline-none id-in"
-              value={id}
               onChange={handleChange}
             />
             <button

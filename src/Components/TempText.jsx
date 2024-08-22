@@ -1,5 +1,4 @@
-const TempText = (probs) => {
-  console.log(`provs${probs.ok}`);
+const TempText = () => {
   return (
     <div className="temp-p flex flex-col gap-2 md:gap-3 justify-center items-center ">
       <p className="text-Ps font-normal text-[16px] md:text-[18px]">

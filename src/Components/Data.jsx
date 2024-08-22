@@ -6,6 +6,7 @@ import { LiaBirthdayCakeSolid } from "react-icons/lia";
 const Data = (probs) => {
   useEffect(() => {
     extraxtDataFromId();
+    console.log(id);
   }, [probs.id]);
 
   const [gender, setGender] = useState("");
