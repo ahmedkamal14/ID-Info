@@ -5,6 +5,7 @@ import Data from "../Components/Data";
 import TempText from "../Components/TempText";
 
 const Home = () => {
+  const [toggle, setToggle] = useState(false);
   function validateEgyptianID(id) {
     const input = document.querySelector(".id-in");
     // Check if the ID is 14 characters long
@@ -27,6 +28,7 @@ const Home = () => {
 
   const handleClick = () => {
     validateEgyptianID(id);
+    setToggle(!toggle);
   };
 
   const [id, setId] = useState("");
@@ -80,7 +82,7 @@ const Home = () => {
               الرقم القومي يجب أن يكون 14 رقم ويحتوي على أرقام فقط
             </p>
           )}
-          {valid ? <Data id={id} /> : <TempText />}
+          {valid ? <Data id={id} tog={toggle} /> : <TempText />}
         </div>
       </div>
 

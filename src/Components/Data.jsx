@@ -7,7 +7,7 @@ const Data = (probs) => {
   useEffect(() => {
     extraxtDataFromId();
     console.log(id);
-  }, [probs.id]);
+  }, [probs.tog]);
 
   const [gender, setGender] = useState("");
   const [birthday, setBirthday] = useState(0);
