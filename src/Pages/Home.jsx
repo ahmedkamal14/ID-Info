@@ -50,6 +50,17 @@ const Home = () => {
         className="absolute top-12 left-12 w-[53px] h-auto"
       />
 
+      <img
+        src="./left.png"
+        alt="Back"
+        className=" absolute -left-5 top-72 hidden md:block"
+      />
+      <img
+        src="./right.png"
+        alt="Back"
+        className=" absolute -right-5 top-72 hidden md:block"
+      />
+
       <div className="container flex flex-col justify-center items-center text-center min-h-[calc(100vh-136px)] gap-16 px-4 md:px-0 pt-[80px] md:pt-[120px]">
         <div className="infoAndIns flex flex-col gap-6 md:gap-12 items-center">
           <div className="text flex flex-col gap-2 md:gap-4">
