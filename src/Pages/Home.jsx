@@ -6,8 +6,8 @@ import TempText from "../Components/TempText";
 
 const Home = () => {
   const [toggle, setToggle] = useState(false);
+  const [passID, setPassID] = useState("");
   function validateEgyptianID(id) {
-    const input = document.querySelector(".id-in");
     // Check if the ID is 14 characters long
     if (id.length !== 14) {
       setValid(false);
@@ -23,7 +23,8 @@ const Home = () => {
 
     setValid(true);
     setWrong(false);
-    input.value = "";
+    setPassID(id);
+    setId("");
   }
 
   const handleClick = () => {
@@ -34,7 +35,6 @@ const Home = () => {
   const [id, setId] = useState("");
   const [valid, setValid] = useState(false);
   const [wrong, setWrong] = useState(false);
-
   const handleChange = (e) => {
     setId(e.target.value);
   };
@@ -76,9 +76,10 @@ const Home = () => {
             <CiSearch className="text-[24px] md:text-[28px] text-[#878787]" />
             <input
               type="text"
-              placeholder="رقم اليطاقة ..."
+              placeholder="رقم البطاقة ..."
               className="bg-[#F3F3F3] w-[75%] md:w-[80%] px-2 md:px-4 py-2 md:py-5 focus:outline-none id-in"
               onChange={handleChange}
+              value={id}
             />
             <button
               className="bg-primary hover:bg-primary/80 transition-all duration-300 rounded-[25px] w-[95px] md:w-[115px] h-[40px] md:h-[46px] text-white text-[18px] md:text-[20px] font-extrabold"
@@ -93,7 +94,7 @@ const Home = () => {
               الرقم القومي يجب أن يكون 14 رقم ويحتوي على أرقام فقط
             </p>
           )}
-          {valid ? <Data id={id} tog={toggle} /> : <TempText />}
+          {valid ? <Data id={passID} tog={toggle} /> : <TempText />}
         </div>
       </div>
 
