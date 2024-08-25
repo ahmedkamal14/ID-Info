@@ -35,12 +35,11 @@ const Data = (probs) => {
     const day = parseInt(dayCode);
 
     setBirthday(day);
-    setBirtMonth(month);
     setBirthYear(year);
 
-    handleMonth(month);
+    setBirtMonth(handleMonth[parseInt(month) - 1]);
     getGenderFromCode(genderCode);
-    getLocatoinFromCode(locationCode);
+    setLocation(getLocFromCode[parseInt(locationCode)]);
   };
 
   const getGenderFromCode = (code) => {
@@ -51,132 +50,53 @@ const Data = (probs) => {
     }
   };
 
-  const getLocatoinFromCode = (code) => {
-    switch (code) {
-      case "01":
-        setLocation("القاهرة");
-        break;
-      case "02":
-        setLocation("الإسكندرية");
-        break;
-      case "03":
-        setLocation("بورسعيد");
-        break;
-      case "04":
-        setLocation("السويس");
-        break;
-      case "11":
-        setLocation("دمياط");
-        break;
-      case "12":
-        setLocation("الدقهلية");
-        break;
-      case "13":
-        setLocation("الشرقية");
-        break;
-      case "14":
-        setLocation("القليوبية");
-        break;
-      case "15":
-        setLocation("كفر الشيخ");
-        break;
-      case "16":
-        setLocation("الغربية");
-        break;
-      case "17":
-        setLocation("المنوفية");
-        break;
-      case "18":
-        setLocation("البحيرة");
-        break;
-      case "19":
-        setLocation("الإسماعلية");
-        break;
-      case "21":
-        setLocation("الجيزة");
-        break;
-      case "22":
-        setLocation("بني سويف");
-        break;
-      case "23":
-        setLocation("الفيوم");
-        break;
-      case "24":
-        setLocation("المنيا");
-        break;
-      case "25":
-        setLocation("أسيوط");
-        break;
-      case "26":
-        setLocation("سوهاج");
-        break;
-      case "27":
-        setLocation("قنا");
-        break;
-      case "28":
-        setLocation("أسوان");
-        break;
-      case "29":
-        setLocation("الوادي الجديد");
-        break;
-      case "31":
-        setLocation("شمال سيناء");
-        break;
-      case "32":
-        setLocation("جنوب سيناء");
-        break;
-      case "33":
-        setLocation("البحر الأحمر");
-        break;
-      case "34":
-        setLocation("الواحات البحرية");
-        break;
-      case "35":
-        setLocation("مرسى مطروح");
-        break;
-    }
+  //implement get location func as an array of objects
+  const getLocFromCode = {
+    1: "القاهرة",
+    2: "الإسكندرية",
+    3: "بورسعيد",
+    4: "السويس",
+    11: "دمياط",
+    12: "الدقهلية",
+    13: "الشرقية",
+    14: "القليوبية",
+    15: "كفر الشيخ",
+    16: "الغربية",
+    17: "المنوفية",
+    18: "البحيرة",
+    19: "الإسماعيلية",
+    21: "الجيزة",
+    22: "بني سويف",
+    23: "الفيوم",
+    24: "المنيا",
+    25: "أسيوط",
+    26: "سوهاج",
+    27: "قنا",
+    28: "أسوان",
+    29: "الأقصر",
+    31: "مطروح",
+    32: "شمال سيناء",
+    33: "جنوب سيناء",
+    34: "البحر الأحمر",
+    35: "الوادي الجديد",
+    88: "خارج مصر",
   };
 
-  const handleMonth = (stringMon) => {
-    switch (stringMon) {
-      case 1:
-        setBirtMonth("يناير");
-        break;
-      case 2:
-        setBirtMonth("فبراير");
-        break;
-      case 3:
-        setBirtMonth("مارس");
-        break;
-      case 4:
-        setBirtMonth("أبريل");
-        break;
-      case 5:
-        setBirtMonth("مايو");
-        break;
-      case 6:
-        setBirtMonth("يونيو");
-        break;
-      case 7:
-        setBirtMonth("يوليو");
-        break;
-      case 8:
-        setBirtMonth("أغسطس");
-        break;
-      case 9:
-        setBirtMonth("سبتمبر");
-        break;
-      case 10:
-        setBirtMonth("أكتوبر");
-        break;
-      case 11:
-        setBirtMonth("نوفمبر");
-        break;
-      case 12:
-        setBirtMonth("ديسمبر");
-        break;
-    }
-  };
+  //make the handle mon a single array;
+  const handleMonth = [
+    "يناير",
+    "فبراير",
+    "مارس",
+    "أبريل",
+    "مايو",
+    "يونيو",
+    "يوليو",
+    "أغسطس",
+    "سبتمبر",
+    "أكتوبر",
+    "نوفمبر",
+    "ديسمبر",
+  ];
 
   return (
     <div className="data grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-5">
